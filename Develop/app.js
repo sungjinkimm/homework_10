@@ -5,6 +5,7 @@ const Employee = require("./lib/Employee");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
+const chalk = require("chalk")
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
@@ -16,14 +17,15 @@ const render = require("./lib/htmlRenderer");
 const teamMembers = [];
 
 function createTeam() {
+  // console.log(chalk.blue("Please build your team"));
   inquirer
     .prompt([
       // asking which type of team member should be created with a list of choices
       {
         type: "list",
-        message: "Which type of team member do you want to create?: ",
+        message: chalk.yellow("Which type of team member do you want to create?: "),
         name: "role",
-        choices: ["Manager", "Engineer", "Intern", "Done"],
+        choices: ["Manager","Engineer", "Intern", "Done"],
       },
     ])
     .then((userChoice) => {
@@ -43,7 +45,7 @@ function createTeam() {
 
 // This function generates all the questions for creating the manager.
 function createManager() {
-  console.log("Please build your team");
+  // console.log("Please build your team");
   inquirer
     .prompt([
       
@@ -56,7 +58,7 @@ function createManager() {
           if (answer !== "") {
             return true;
           }
-          return "Please enter at least one character.";
+          return chalk.yellow("Please enter at least one character.");
         },
       },
       {
@@ -68,7 +70,7 @@ function createManager() {
           if (answer !== "") {
             return true;
           }
-          return "Please enter at least one character.";
+          return chalk.yellow("Please enter at least one character.");
         },
       },
       {
@@ -80,7 +82,7 @@ function createManager() {
           if (answer !== "") {
             return true;
           }
-          return "Please enter at least one character.";
+          return chalk.yellow("Please enter at least one character.");
         },
       },
       {
@@ -92,7 +94,7 @@ function createManager() {
           if (answer !== "") {
             return true;
           }
-          return "Please enter at least one character.";
+          return chalk.yellow("Please enter at least one character.");
         },
       },
     ])
@@ -121,7 +123,7 @@ function createEngineer() {
           if (answer !== "") {
             return true;
           }
-          return "Please enter at least one character.";
+          return chalk.yellow("Please enter at least one character.");
         },
       },
       {
@@ -133,7 +135,7 @@ function createEngineer() {
           if (answer !== "") {
             return true;
           }
-          return "Please enter at least one character.";
+          return chalk.yellow("Please enter at least one character.");
         },
       },
       {
@@ -145,7 +147,7 @@ function createEngineer() {
           if (answer !== "") {
             return true;
           }
-          return "Please enter at least one character.";
+          return chalk.yellow("Please enter at least one character.");
         },
       },
       {
@@ -157,7 +159,7 @@ function createEngineer() {
           if (answer !== "") {
             return true;
           }
-          return "Please enter at least one character.";
+          return chalk.yellow("Please enter at least one character.");
         },
       },
     ])
@@ -186,7 +188,7 @@ function createIntern() {
           if (answer !== "") {
             return true;
           }
-          return "Please enter at least one character.";
+          return chalk.yellow("Please enter at least one character.");
         },
       },
       {
@@ -198,7 +200,7 @@ function createIntern() {
           if (answer !== "") {
             return true;
           }
-          return "Please enter at least one character.";
+          return chalk.yellow("Please enter at least one character.");
         },
       },
       {
@@ -210,7 +212,7 @@ function createIntern() {
           if (answer !== "") {
             return true;
           }
-          return "Please enter at least one character.";
+          return chalk.yellow("Please enter at least one character.");
         },
       },
       {
@@ -222,7 +224,7 @@ function createIntern() {
           if (answer !== "") {
             return true;
           }
-          return "Please enter at least one character.";
+          return chalk.yellow("Please enter at least one character.");
         },
       },
     ])
@@ -248,9 +250,9 @@ function renderHtmlPage() {
 
   fs.writeFile("output/index.html", html, error =>{
     if (error){
-      return Error
+      return console.log(Error)
     } else {
-      return console.log("Success! 'index.html' file generated in folder 'output'")
+      return console.log(chalk.yellow("Success! 'index.html' file generated in folder 'output'"))
     }
   })
 
