@@ -196,7 +196,7 @@ function createIntern() {
       {
         type: "input",
         message: "What is your intern's name?",
-        name: "engineerName",
+        name: "name",
         // Note how the validate function works
         validate: (answer) => {
           if (answer !== "") {
@@ -243,22 +243,16 @@ function createIntern() {
       },
     ])
     .then((answer3) => {
-      // STUDENT: Make sure the id supplied is unique, then take the data supplied and
-      // instantiate the Engineer constructor.
-      // console.log(userChoice);
-      // renderHtmlPage()
-
+      
       console.log(answer3);
-      // teamMembers.push(answer3)
+      const newIntern = new Intern(answer3.name, answer3.email, answer3.id, answer3.school)
+      teamMembers.push(newIntern)
       createTeam();
 
-      // STUDENT: When finished:
-      // Add the new object to the team member array
-      // Pass control back to the createTeam() function
     });
 }
 
-// STUDENT: This function will call the render function required near the top (line 12),
+// This function will call the render function required near the top (line 12),
 // and pass INTO it the teamMembers area; from there, write the HTML returned back to a file
 // in a directory called output.
 function renderHtmlPage() {
@@ -267,23 +261,14 @@ function renderHtmlPage() {
     if (error){
       return Error
     } else {
-      return ("Success!")
+      return console.log("Success! 'index.html' file generated in folder 'output'")
     }
   })
 }
 
-// This is our starter function.
-// Note that we use separate functions for different questions in inquirer to
-// help keep code organized.
+// starter function.
 function startMenu() {
-  // Here we start things off by calling this function to get person's role
   createManager();
 }
-
-// HINT: make sure to build out your classes first! Remember that your Manager, Engineer,
-// and Intern classes should all extend from a class named Employee; see the directions
-// for further information. Be sure to test out each class and verify it generates an
-// object with the correct structure and methods. This structure will be crucial in order
-// for the provided `render` function to work! ```
 
 startMenu();
