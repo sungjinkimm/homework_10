@@ -1,7 +1,7 @@
 # Team Profile Generator
 
-## sungjinkimm
-[https://github.com/sungjinkimm](https://github.com/sungjinkimm)
+## Link
+[https://github.com/kbarcaa](https://github.com/kbarcaa)
 
 ## Project Description:
 
@@ -18,8 +18,8 @@ Combined various NPMs such as inquirer, fs, chalk and the use of Classes and Con
 
 ## Installation:
 
-* [Git-clone](git@github.com:sungjinkimm/homework_10.git)
-* L git@github.com:sungjinkimm/homework_10.git
+* [Git-clone](git@github.com:kbarcaa/homework_10.git)
+* L git@github.com:kbarcaa/homework_10.git
 * install npm packages
 * in terminal of the root directory >> run >> node app.js 
 * Output folder will be auto generated.
@@ -49,11 +49,10 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS",  WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Badge: 
-
-![GitHub followers](https://img.shields.io/github/followers/sungjinkimm?style=social)
+![homework_10](https://img.shields.io/github/languages/top/kbarcaa/homework_10)
 
 ## GitHub URL & Profile
-[GitHub URL](https://github.com/sungjinkimm)
+[GitHub URL](https://github.com/kbarcaa)
 
 <!-- ![GitHub Avatar](https://avatars0.githubusercontent.com/u/50185484?v=4) -->
 
